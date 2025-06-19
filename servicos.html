@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Configurações de codificação e responsividade -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Título da aba do navegador -->
   <title>Serviços - Minimercado Online</title>
+
+  <!-- Importação do Bootstrap para estilização e layout -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Importação dos ícones do Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Estilizações personalizadas -->
   <style>
     body {
       background-color: #f9f9f9;
       font-family: Arial, sans-serif;
     }
 
+    /* Título principal de cada seção */
     .titulo-bloco {
       background-color: #1E2A47;
       color: white;
@@ -20,6 +30,7 @@
       font-weight: bold;
     }
 
+    /* Subtítulo colorido abaixo do título */
     .subtitulo {
       background-color: #1DA1F2;
       color: white;
@@ -28,12 +39,14 @@
       letter-spacing: 1px;
     }
 
+    /* Estilização dos ícones dos cards */
     .icone-card {
       font-size: 48px;
       color: #007b8a;
       margin-bottom: 15px;
     }
 
+    /* Estilo dos cards que contêm as vantagens */
     .card-custom {
       border: none;
       background-color: white;
@@ -45,9 +58,10 @@
     }
 
     .card-custom:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px); /* Efeito de levantar o card ao passar o mouse */
     }
 
+    /* Seção com fundo decorativo para as vantagens */
     .vantagens-fundo {
       position: relative;
       z-index: 1;
@@ -61,18 +75,20 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('vantagens.jpg'); /* <- Substitua pelo nome correto da sua imagem */
+      background-image: url('vantagens.jpg'); /* <- Imagem de fundo com baixa opacidade */
       background-size: cover;
       background-position: center;
       opacity: 0.08;
       z-index: 0;
     }
 
+    /* Garante que o conteúdo fique acima da imagem de fundo */
     .vantagens-fundo .container {
       position: relative;
       z-index: 1;
     }
 
+    /* Rodapé */
     footer {
       background-color: #1e2a47;
       color: white;
@@ -91,6 +107,7 @@
       text-decoration: underline;
     }
 
+    /* Botão de voltar para a página inicial */
     .btn-voltar {
       margin: 30px auto 0;
       display: block;
@@ -109,14 +126,16 @@
 </head>
 <body>
 
-  <!-- Retirada na Loja -->
+  <!-- Seção: Vantagens da retirada na loja -->
   <section class="vantagens-fundo">
     <div class="titulo-bloco">
       <h1>RETIRADA NA LOJA</h1>
       <p class="subtitulo">VANTAGENS</p>
     </div>
+
     <div class="container py-5">
       <div class="row g-4">
+        <!-- Card 1 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-clock-history icone-card"></i>
@@ -124,6 +143,7 @@
             <p>Retire seu pedido a partir de 1 hora após a compra!</p>
           </div>
         </div>
+        <!-- Card 2 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-piggy-bank icone-card"></i>
@@ -131,6 +151,7 @@
             <p>Sem custo adicional. A retirada é totalmente gratuita.</p>
           </div>
         </div>
+        <!-- Card 3 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-shop icone-card"></i>
@@ -138,6 +159,7 @@
             <p>Retire em nossa loja física ou autorize alguém!</p>
           </div>
         </div>
+        <!-- Card 4 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-house-door icone-card"></i>
@@ -149,14 +171,16 @@
     </div>
   </section>
 
-  <!-- Tele-Entrega -->
+  <!-- Seção: Vantagens da tele-entrega -->
   <section class="vantagens-fundo">
     <div class="titulo-bloco">
       <h1>TELE-ENTREGA</h1>
       <p class="subtitulo">VANTAGENS</p>
     </div>
+
     <div class="container py-5">
       <div class="row g-4">
+        <!-- Card 1 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-truck icone-card"></i>
@@ -164,6 +188,7 @@
             <p>Receba suas compras em poucas horas no conforto de casa.</p>
           </div>
         </div>
+        <!-- Card 2 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-calendar2-week icone-card"></i>
@@ -171,6 +196,7 @@
             <p>Escolha dia e hora para receber sua entrega no momento ideal.</p>
           </div>
         </div>
+        <!-- Card 3 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-shield-check icone-card"></i>
@@ -178,6 +204,7 @@
             <p>Equipe treinada para garantir segurança e higiene na entrega.</p>
           </div>
         </div>
+        <!-- Card 4 -->
         <div class="col-md-6 col-lg-3">
           <div class="card-custom">
             <i class="bi bi-gift icone-card"></i>
@@ -189,7 +216,7 @@
     </div>
   </section>
 
-  <!-- Botão de Voltar -->
+  <!-- Botão que retorna para a página inicial -->
   <a href="index.html" class="btn-voltar">Voltar ao Início</a>
 
   <!-- Rodapé -->
@@ -202,6 +229,7 @@
     </p>
   </footer>
 
+  <!-- Scripts do Bootstrap para interações dinâmicas -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
