@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Configurações básicas de codificação e responsividade -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Título exibido na aba do navegador -->
   <title>Catálogo de Produtos</title>
+
+  <!-- Estilo do Bootstrap para componentes prontos -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Estilo personalizado -->
   <style>
     body {
       background-color: #f9f9f9;
       font-family: Arial, sans-serif;
     }
 
+    /* Estilo do menu superior */
     .navbar-dark .navbar-nav .nav-link {
       font-weight: bold;
     }
@@ -19,6 +27,7 @@
       color: #C8A2D4 !important;
     }
 
+    /* Título de cada seção de produtos */
     .categoria {
       background-color: #1e2a47;
       color: white;
@@ -27,6 +36,7 @@
       margin-top: 0;
     }
 
+    /* Container para os cards de produtos */
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -35,6 +45,7 @@
       padding: 20px;
     }
 
+    /* Estilo dos cards individuais de produto */
     .produto-card {
       width: 300px;
       border: 1px solid #ddd;
@@ -48,7 +59,7 @@
     .produto-card img {
       width: 100%;
       height: 200px;
-      object-fit: contain;
+      object-fit: contain; /* Garante que a imagem caiba sem distorcer */
     }
 
     .produto-card h5 {
@@ -65,6 +76,7 @@
       margin-top: 10px;
     }
 
+    /* Campos que aparecem ao clicar em Agendar */
     .agendamento {
       display: none;
       margin-top: 15px;
@@ -73,6 +85,7 @@
       border-radius: 8px;
     }
 
+    /* Rodapé da página */
     footer {
       background-color: #1e2a47;
       color: white;
@@ -89,14 +102,16 @@
 </head>
 <body>
 
-<!-- Menu -->
+<!-- Menu de navegação superior -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1e2a47;">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">Minimercado Online</a>
+    <!-- Botão de menu para telas pequenas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
             aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Links do menu -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -108,12 +123,15 @@
   </div>
 </nav>
 
-<!-- Imagem topo -->
-<div><img src="topo3.jpg" alt="Banner com produtos variados do minimercado" style="width: 100%; height: 250px; object-fit: cover;" /></div>
+<!-- Imagem banner no topo da página -->
+<div>
+  <img src="topo3.jpg" alt="Banner com produtos variados do minimercado" style="width: 100%; height: 250px; object-fit: cover;" />
+</div>
 
 <!-- Categoria: Mercearia -->
 <div class="categoria"><h2>Mercearia</h2></div>
 <div class="card-container">
+  <!-- Produto 1 -->
   <div class="produto-card">
     <img src="feijao.jpg" alt="Pacote de feijão carioca exposto na seção de mercearia">
     <h5>Feijão Carioca</h5>
@@ -125,6 +143,7 @@
       <input type="time" class="form-control mb-2">
     </div>
   </div>
+  <!-- Produto 2 -->
   <div class="produto-card">
     <img src="milho.jpg" alt="Espigas de milho verde frescas, prontas para venda">
     <h5>Milho Verde</h5>
@@ -141,6 +160,7 @@
 <!-- Categoria: Frutas -->
 <div class="categoria"><h2>Frutas</h2></div>
 <div class="card-container">
+  <!-- Produto 1 -->
   <div class="produto-card">
     <img src="laranja.jpg" alt="Laranjas pêra frescas com casca brilhante">
     <h5>Laranja Pêra</h5>
@@ -152,6 +172,7 @@
       <input type="time" class="form-control mb-2">
     </div>
   </div>
+  <!-- Produto 2 -->
   <div class="produto-card">
     <img src="uvas.jpg" alt="Cacho de uvas verdes sem sementes">
     <h5>Uvas</h5>
@@ -168,6 +189,7 @@
 <!-- Categoria: Limpeza -->
 <div class="categoria"><h2>Limpeza</h2></div>
 <div class="card-container">
+  <!-- Produto 1 -->
   <div class="produto-card">
     <img src="sabaomaos.jpg" alt="Frasco de sabão líquido para mãos com tampa dosadora">
     <h5>Sabão Líquido</h5>
@@ -179,6 +201,7 @@
       <input type="time" class="form-control mb-2">
     </div>
   </div>
+  <!-- Produto 2 -->
   <div class="produto-card">
     <img src="vidro.jpg" alt="Spray de limpa vidros com rótulo azul">
     <h5>Limpa Vidros</h5>
@@ -199,12 +222,15 @@
   <p><a href="politica.html">Política de Privacidade</a> | <a href="contato.html">Contato</a></p>
 </footer>
 
+<!-- Função que exibe ou oculta o agendamento -->
 <script>
   function toggleAgendamento(btn) {
     const agendamento = btn.nextElementSibling;
     agendamento.style.display = agendamento.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+
+<!-- Script do Bootstrap para funcionalidades como menu responsivo -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
