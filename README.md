@@ -2,7 +2,7 @@ Minimercado Online 🛒
 
 Este projeto foi desenvolvido como parte da disciplina Fundamentos de Sistemas Web – Fase 2
 
-Desenvolvento um site para um minimercado, conforme as diretrizes da disciplina. A proposta foi evoluir o site utilizando HTML, CSS com Bootstrap e JavaScript, priorizando uma boa organização do código, responsividade em diferentes dispositivos, acessibilidade e a introdução de funcionalidades mais dinâmicas.
+Desenvolvi um site para um minimercado, conforme as diretrizes da disciplina. A proposta foi evoluir o site utilizando HTML, CSS com Bootstrap e JavaScript, priorizando uma boa organização do código, responsividade em diferentes dispositivos, acessibilidade e a introdução de funcionalidades mais dinâmicas.
 
 A página inicial apresenta um carrossel com imagens de categorias como alimentos, frutas e limpeza, cada uma com um botão que direciona o usuário às ofertas. Na página de produtos, os itens estão organizados por categorias — como Mercearia, Frutas e Limpeza — e exibem nome, imagem com audiodescrição, preço e dois botões: um para adicionar ao carrinho e outro para agendar a entrega, com campos interativos de data e hora, utilizando JavaScript.
 
