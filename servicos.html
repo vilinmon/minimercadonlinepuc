@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços - Minimercado Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .titulo-bloco {
+      background-color: #1E2A47;
+      color: white;
+      padding: 40px 0 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .subtitulo {
+      background-color: #1DA1F2;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .icone-card {
+      font-size: 48px;
+      color: #007b8a;
+      margin-bottom: 15px;
+    }
+
+    .card-custom {
+      border: none;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 25px 20px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+    }
+
+    .vantagens-fundo {
+      position: relative;
+      z-index: 1;
+      background-color: #f9f9f9;
+    }
+
+    .vantagens-fundo::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('vantagens.jpg'); /* <- Substitua pelo nome correto da sua imagem */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    .vantagens-fundo .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      background-color: #1e2a47;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #C8A2D4;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-voltar {
+      margin: 30px auto 0;
+      display: block;
+      background-color: #007bff;
+      border: none;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .btn-voltar:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Retirada na Loja -->
+  <section class="vantagens-fundo">
+    <div class="titulo-bloco">
+      <h1>RETIRADA NA LOJA</h1>
+      <p class="subtitulo">VANTAGENS</p>
+    </div>
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-clock-history icone-card"></i>
+            <h5>Conveniência e Rapidez</h5>
+            <p>Retire seu pedido a partir de 1 hora após a compra!</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-piggy-bank icone-card"></i>
+            <h5>Economia no Frete</h5>
+            <p>Sem custo adicional. A retirada é totalmente gratuita.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-shop icone-card"></i>
+            <h5>Facilidade na Retirada</h5>
+            <p>Retire em nossa loja física ou autorize alguém!</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-house-door icone-card"></i>
+            <h5>Flexibilidade</h5>
+            <p>Escolha o melhor horário e retire com comodidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tele-Entrega -->
+  <section class="vantagens-fundo">
+    <div class="titulo-bloco">
+      <h1>TELE-ENTREGA</h1>
+      <p class="subtitulo">VANTAGENS</p>
+    </div>
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-truck icone-card"></i>
+            <h5>Entrega Rápida</h5>
+            <p>Receba suas compras em poucas horas no conforto de casa.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-calendar2-week icone-card"></i>
+            <h5>Agendamento</h5>
+            <p>Escolha dia e hora para receber sua entrega no momento ideal.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-shield-check icone-card"></i>
+            <h5>Segurança</h5>
+            <p>Equipe treinada para garantir segurança e higiene na entrega.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <i class="bi bi-gift icone-card"></i>
+            <h5>Facilidade de Pagamento</h5>
+            <p>Opções flexíveis: PIX, cartão ou pagamento na entrega.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão de Voltar -->
+  <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p class="mb-1">Tudo o que você precisa para o dia a dia, a um clique de distância.</p>
+    <p>&copy; 2025 Minimercado Online - Todos os direitos reservados.</p>
+    <p>
+      <a href="politica.html">Política de Privacidade</a> |
+      <a href="contato.html">Contato</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

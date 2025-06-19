@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Produtos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      font-weight: bold;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #C8A2D4 !important;
+    }
+
+    .categoria {
+      background-color: #1e2a47;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .produto-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .produto-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .produto-card h5 {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .produto-card p {
+      margin: 5px 0;
+    }
+
+    .produto-card .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .agendamento {
+      display: none;
+      margin-top: 15px;
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #1e2a47;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    footer a {
+      color: #C8A2D4;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1e2a47;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Minimercado Online</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link active" href="produtos.html">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Imagem topo -->
+<div><img src="topo3.jpg" alt="Banner com produtos variados do minimercado" style="width: 100%; height: 250px; object-fit: cover;" /></div>
+
+<!-- Categoria: Mercearia -->
+<div class="categoria"><h2>Mercearia</h2></div>
+<div class="card-container">
+  <div class="produto-card">
+    <img src="feijao.jpg" alt="Pacote de feijão carioca exposto na seção de mercearia">
+    <h5>Feijão Carioca</h5>
+    <p>R$ 6,00/kg</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+  <div class="produto-card">
+    <img src="milho.jpg" alt="Espigas de milho verde frescas, prontas para venda">
+    <h5>Milho Verde</h5>
+    <p>R$ 4,50/kg</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+</div>
+
+<!-- Categoria: Frutas -->
+<div class="categoria"><h2>Frutas</h2></div>
+<div class="card-container">
+  <div class="produto-card">
+    <img src="laranja.jpg" alt="Laranjas pêra frescas com casca brilhante">
+    <h5>Laranja Pêra</h5>
+    <p>R$ 3,80/kg</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+  <div class="produto-card">
+    <img src="uvas.jpg" alt="Cacho de uvas verdes sem sementes">
+    <h5>Uvas</h5>
+    <p>R$ 7,20/kg</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+</div>
+
+<!-- Categoria: Limpeza -->
+<div class="categoria"><h2>Limpeza</h2></div>
+<div class="card-container">
+  <div class="produto-card">
+    <img src="sabaomaos.jpg" alt="Frasco de sabão líquido para mãos com tampa dosadora">
+    <h5>Sabão Líquido</h5>
+    <p>R$ 5,90</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+  <div class="produto-card">
+    <img src="vidro.jpg" alt="Spray de limpa vidros com rótulo azul">
+    <h5>Limpa Vidros</h5>
+    <p>R$ 6,40</p>
+    <button class="btn btn-dark">Adicionar ao carrinho</button>
+    <button class="btn btn-outline-primary" onclick="toggleAgendamento(this)">Agendar</button>
+    <div class="agendamento">
+      <input type="date" class="form-control mb-2">
+      <input type="time" class="form-control mb-2">
+    </div>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer>
+  <p class="mb-1">Tudo o que você precisa para o dia a dia, a um clique de distância.</p>
+  <p class="mb-1">&copy; 2025 Minimercado - Todos os direitos reservados.</p>
+  <p><a href="politica.html">Política de Privacidade</a> | <a href="contato.html">Contato</a></p>
+</footer>
+
+<script>
+  function toggleAgendamento(btn) {
+    const agendamento = btn.nextElementSibling;
+    agendamento.style.display = agendamento.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

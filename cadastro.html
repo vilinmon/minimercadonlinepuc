@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Minimercado Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background-image: url('topo.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 60px;
+      color: #00123e;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e2a47;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-outline-secondary {
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+    
+    .voltar-inicio {
+      text-align: right;
+      padding: 20px 40px 0 0;
+    }
+    .voltar-inicio {
+      text-align: center;
+      padding: 20px 0 0;
+    }
+
+    .voltar-inicio a {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+   }
+
+    .voltar-inicio a:hover {
+    background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Faixa visual no topo -->
+  <div class="hero">
+    <h1>
+      Ainda não é cadastrado? Aproveite ofertas personalizadas!<br />
+    </h1>
+  </div>
+
+  <!-- Botão Voltar ao Início -->
+   <div class="voltar-inicio">
+     <a href="index.html">Voltar ao Início</a>
+  </div>
+
+  <!-- Formulário -->
+  <div class="form-container">
+    <h2 class="form-title">Cadastro de Cliente</h2>
+    <form action="cadastro_sucesso.html" method="POST">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label d-block">Sexo</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" required />
+          <label class="form-check-label" for="masculino">Masculino</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sexo" id="feminino" value="Feminino" required />
+          <label class="form-check-label" for="feminino">Feminino</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required />
+      </div>
+      <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco" name="endereco" required />
+      </div>
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="cidade" name="cidade" required />
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-select" id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+          <option value="RS">RS</option>
+        </select>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="termos" required>
+        <label class="form-check-label" for="termos">Li e aceito os <a href="termos.html" target="_blank">termos e condições</a></label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+    </form>
+  </div>
+
+  <!-- Rodapé -->
+  <footer style="background-color: #1e2a47; color: white; text-align: center; padding: 30px 10px; margin-top: 50px;">
+    <p class="mb-1" style="margin-bottom: 10px; color: white;">Tudo o que você precisa para o dia a dia, a um clique de distância.</p>
+    <p class="mb-1" style="margin-bottom: 10px; color: white;">&copy; 2025 Minimercado - Todos os direitos reservados.</p>
+    <p>
+      <a href="politica.html" style="color: #C8A2D4; text-decoration: none; margin: 0 10px;">Política de Privacidade</a> |
+      <a href="contato.html" style="color: #C8A2D4; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

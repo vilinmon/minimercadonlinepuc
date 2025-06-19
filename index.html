@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimercado Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .header {
+      background-color: #1e2a47;
+      color: white;
+      padding: 40px 0;
+      margin: 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .header-nav a:hover {
+      color: #C8A2D4;
+    }
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      margin: 0;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      transform: translateY(-50%);
+      color: #1E2A47;
+      font-size: 2.2rem;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .botao-cadastro {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-cadastro:hover {
+      background-color: #0056b3;
+    }
+
+    .instruction-text {
+      text-align: center;
+      font-size: 2rem;
+      color: #1E2A47;
+      margin-top: 40px;
+    }
+
+    .categories-menu {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      gap: 30px;
+    }
+
+    .category-item {
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .category-item h3 {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .category-item p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .category-item .btn {
+      padding: 10px 30px;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      background-color: #1e2a47;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    .footer a {
+      color: #C8A2D4;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <h1>Minimercado Online</h1>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Imagem de Destaque -->
+  <div class="hero-container">
+    <img src="download.jpg" alt="Produtos do Minimercado" class="hero-image">
+    <div class="hero-text">
+      Seu supermercado online. <br>
+      Tudo o que você precisa para o dia a dia,
+      <p>a um clique de distância.</p>
+      <a href="cadastro.html" class="botao-cadastro">Cadastre-se agora</a>
+    </div>
+  </div>
+
+  <!-- Título Ofertas -->
+  <div class="ofertas-titulo text-center mt-5 mb-3">
+    <h2 style="font-weight: bold; font-size: 2.2rem; color: #1E2A47;">Confira as ofertas da semana</h2>
+    <p style="font-size: 1.1rem; color: #555;">Aproveite os melhores preços em frutas, alimentos e itens de limpeza!</p>
+  </div>
+
+    <!-- Carrossel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="alimento.jpg" class="d-block w-100 rounded" alt="Camarão cozido, peixe e pistaches sobre uma bancada clara, promovendo a oferta da semana." style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="frutas.jpg" class="d-block w-100 rounded" alt="Ofertas de Frutas" style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="limpeza.jpg" class="d-block w-100 rounded" alt="Ofertas de Limpeza" style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Texto de Instrução -->
+  <div class="instruction-text">
+    Escolha o modelo que mais combina com você.
+  </div>
+
+  <!-- Menu de Categorias -->
+  <div class="categories-menu">
+    <div class="category-item">
+      <img src="loja.jpg" alt="Retirada na Loja">
+      <h3>Retirada na Loja</h3>
+      <p>Retire os produtos diretamente na loja mais próxima.</p>
+      <a href="produtos.html" class="btn btn-primary">QUERO ESSE</a>
+    </div>
+    <div class="category-item">
+      <img src="casa.jpg" alt="Tele-Entrega">
+      <h3>Tele-Entrega</h3>
+      <p>Receba os produtos no conforto da sua casa.</p>
+      <a href="produtos.html" class="btn btn-primary">QUERO ESSE</a>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p class="mb-1">Tudo o que você precisa para o dia a dia, a um clique de distância.</p>
+    <p>&copy; 2025 Minimercado Online. Todos os direitos reservados.</p>
+    <p>
+      <a href="politica.html">Política de Privacidade</a> |
+      <a href="contato.html">Contato</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
