@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título da aba -->
   <title>Minimercado Online</title>
+
+  <!-- Importa o Bootstrap 5 via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
   <style>
+    /* Estilização do cabeçalho */
     .header {
       background-color: #1e2a47;
       color: white;
       padding: 40px 0;
-      margin: 0;
       text-align: center;
-      position: relative;
     }
 
+    /* Menu de navegação no cabeçalho */
     .header-nav {
       display: flex;
       justify-content: center;
@@ -33,11 +40,11 @@
       color: #C8A2D4;
     }
 
+    /* Container com imagem e texto promocional */
     .hero-container {
       position: relative;
       width: 100%;
       height: 600px;
-      margin: 0;
     }
 
     .hero-image {
@@ -53,12 +60,11 @@
       transform: translateY(-50%);
       color: #1E2A47;
       font-size: 2.2rem;
-      text-align: left;
       font-weight: bold;
     }
 
+    /* Botão principal de cadastro */
     .botao-cadastro {
-      display: inline-block;
       background-color: #007bff;
       color: white;
       padding: 12px 30px;
@@ -67,6 +73,7 @@
       font-size: 1.1rem;
       text-decoration: none;
       margin-top: 20px;
+      display: inline-block;
       transition: background-color 0.3s ease;
     }
 
@@ -74,6 +81,7 @@
       background-color: #0056b3;
     }
 
+    /* Texto de instrução abaixo do carrossel */
     .instruction-text {
       text-align: center;
       font-size: 2rem;
@@ -81,6 +89,7 @@
       margin-top: 40px;
     }
 
+    /* Seção de categorias de entrega */
     .categories-menu {
       display: flex;
       justify-content: center;
@@ -126,6 +135,7 @@
       font-size: 1.1rem;
     }
 
+    /* Rodapé do site */
     .footer {
       background-color: #1e2a47;
       color: white;
@@ -146,7 +156,8 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
+
+  <!-- Cabeçalho com nome do site e menu -->
   <header class="header">
     <h1>Minimercado Online</h1>
     <nav class="header-nav">
@@ -157,7 +168,7 @@
     </nav>
   </header>
 
-  <!-- Imagem de Destaque -->
+  <!-- Imagem de destaque com texto promocional -->
   <div class="hero-container">
     <img src="download.jpg" alt="Produtos do Minimercado" class="hero-image">
     <div class="hero-text">
@@ -168,35 +179,39 @@
     </div>
   </div>
 
-  <!-- Título Ofertas -->
+  <!-- Título e subtítulo da seção de ofertas -->
   <div class="ofertas-titulo text-center mt-5 mb-3">
     <h2 style="font-weight: bold; font-size: 2.2rem; color: #1E2A47;">Confira as ofertas da semana</h2>
     <p style="font-size: 1.1rem; color: #555;">Aproveite os melhores preços em frutas, alimentos e itens de limpeza!</p>
   </div>
 
-    <!-- Carrossel -->
+  <!-- Carrossel de imagens com chamadas para ofertas -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
+      <!-- Slide 1 -->
       <div class="carousel-item active">
-        <img src="alimento.jpg" class="d-block w-100 rounded" alt="Camarão cozido, peixe e pistaches sobre uma bancada clara, promovendo a oferta da semana." style="height: 400px; object-fit: cover;">
+        <img src="alimento.jpg" class="d-block w-100 rounded" alt="Camarão cozido, peixe e pistaches" style="height: 400px; object-fit: cover;">
         <div class="carousel-caption d-none d-md-block">
-          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none;">VER OFERTA</a>
         </div>
       </div>
+      <!-- Slide 2 -->
       <div class="carousel-item">
         <img src="frutas.jpg" class="d-block w-100 rounded" alt="Ofertas de Frutas" style="height: 400px; object-fit: cover;">
         <div class="carousel-caption d-none d-md-block">
-          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none;">VER OFERTA</a>
         </div>
       </div>
+      <!-- Slide 3 -->
       <div class="carousel-item">
         <img src="limpeza.jpg" class="d-block w-100 rounded" alt="Ofertas de Limpeza" style="height: 400px; object-fit: cover;">
         <div class="carousel-caption d-none d-md-block">
-          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none; font-size: 1rem; padding: 10px 20px;">VER OFERTA</a>
+          <a href="produtos.html" class="btn btn-primary fw-bold" style="background-color: #007bff; border: none;">VER OFERTA</a>
         </div>
       </div>
     </div>
 
+    <!-- Botões de navegação do carrossel -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
@@ -205,19 +220,21 @@
     </button>
   </div>
 
-  <!-- Texto de Instrução -->
+  <!-- Texto de instrução para o usuário -->
   <div class="instruction-text">
     Escolha o modelo que mais combina com você.
   </div>
 
-  <!-- Menu de Categorias -->
+  <!-- Opções de entrega disponíveis -->
   <div class="categories-menu">
+    <!-- Retirada na loja -->
     <div class="category-item">
       <img src="loja.jpg" alt="Retirada na Loja">
       <h3>Retirada na Loja</h3>
       <p>Retire os produtos diretamente na loja mais próxima.</p>
       <a href="produtos.html" class="btn btn-primary">QUERO ESSE</a>
     </div>
+    <!-- Tele-entrega -->
     <div class="category-item">
       <img src="casa.jpg" alt="Tele-Entrega">
       <h3>Tele-Entrega</h3>
@@ -236,6 +253,7 @@
     </p>
   </footer>
 
+  <!-- Bootstrap JS para funcionalidades como o carrossel -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
