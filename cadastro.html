@@ -1,15 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Metadados básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro - Minimercado Online</title>
-
-  <!-- Importação do Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <!-- Estilos personalizados -->
   <style>
     body {
       background-color: #f9f9f9;
@@ -17,8 +12,6 @@
       margin: 0;
       padding: 0;
     }
-
-    /* Área visual de destaque no topo */
     .hero {
       background-image: url('topo.jpg'); 
       background-size: cover;
@@ -30,7 +23,6 @@
       padding-left: 60px;
       color: #00123e;
     }
-
     .hero h1 {
       font-size: 2rem;
       font-weight: bold;
@@ -39,8 +31,6 @@
       padding: 20px;
       border-radius: 8px;
     }
-
-    /* Estilo do contêiner do formulário */
     .form-container {
       max-width: 600px;
       margin: 40px auto;
@@ -49,35 +39,27 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .form-title {
       text-align: center;
       margin-bottom: 20px;
       color: #1e2a47;
       font-weight: bold;
     }
-
-    /* Estilização dos botões */
     .btn-primary {
       background-color: #007bff;
       border: none;
     }
-
     .btn-primary:hover {
       background-color: #0056b3;
     }
-
     .btn-outline-secondary {
       font-weight: bold;
       padding: 10px 20px;
     }
-
-    /* Botão "Voltar ao Início" */
     .voltar-inicio {
       text-align: center;
       padding: 20px 0 0;
     }
-
     .voltar-inicio a {
       background-color: #007bff;
       color: white;
@@ -89,7 +71,6 @@
       display: inline-block;
       transition: background-color 0.3s ease;
     }
-
     .voltar-inicio a:hover {
       background-color: #0056b3;
     }
@@ -97,37 +78,30 @@
 </head>
 <body>
 
-  <!-- Faixa visual com chamada para o cadastro -->
+  <!-- Faixa visual no topo -->
   <div class="hero">
     <h1>
       Ainda não é cadastrado? Aproveite ofertas personalizadas!<br />
     </h1>
   </div>
 
-  <!-- Botão para voltar à página inicial -->
+  <!-- Botão Voltar ao Início -->
   <div class="voltar-inicio">
     <a href="index.html">Voltar ao Início</a>
   </div>
 
-  <!-- Formulário de cadastro -->
+  <!-- Formulário -->
   <div class="form-container">
     <h2 class="form-title">Cadastro de Cliente</h2>
-
-    <!-- Envia dados para a página de sucesso -->
     <form action="cadastro_sucesso.html" method="POST">
-      <!-- Campo Nome -->
       <div class="mb-3">
         <label for="nome" class="form-label">Nome completo</label>
         <input type="text" class="form-control" id="nome" name="nome" required />
       </div>
-
-      <!-- Campo CPF -->
       <div class="mb-3">
         <label for="cpf" class="form-label">CPF</label>
         <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required />
       </div>
-
-      <!-- Campo Sexo com opções em radio -->
       <div class="mb-3">
         <label class="form-label d-block">Sexo</label>
         <div class="form-check form-check-inline">
@@ -139,32 +113,22 @@
           <label class="form-check-label" for="feminino">Feminino</label>
         </div>
       </div>
-
-      <!-- Campo E-mail -->
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label>
         <input type="email" class="form-control" id="email" name="email" required />
       </div>
-
-      <!-- Campo Telefone -->
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
         <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required />
       </div>
-
-      <!-- Campo Endereço -->
       <div class="mb-3">
         <label for="endereco" class="form-label">Endereço</label>
         <input type="text" class="form-control" id="endereco" name="endereco" required />
       </div>
-
-      <!-- Campo Cidade -->
       <div class="mb-3">
         <label for="cidade" class="form-label">Cidade</label>
         <input type="text" class="form-control" id="cidade" name="cidade" required />
       </div>
-
-      <!-- Campo Estado com select -->
       <div class="mb-3">
         <label for="estado" class="form-label">Estado</label>
         <select class="form-select" id="estado" name="estado" required>
@@ -176,20 +140,25 @@
         </select>
       </div>
 
-      <!-- Aceitação dos termos -->
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="termos" required>
-        <label class="form-check-label" for="termos">
-          Li e aceito os <a href="termos.html" target="_blank">termos e condições</a>
-        </label>
+      <!-- ✅ Bloco do agendamento com horário definido -->
+      <div class="mb-3">
+        <label for="data" class="form-label">Data para retirada ou entrega <small>(todos os dias)</small></label>
+        <input type="date" class="form-control" id="data" name="data" required>
+      </div>
+      <div class="mb-3">
+        <label for="hora" class="form-label">Horário desejado <small>(entregas das 08:00 às 20:00)</small></label>
+        <input type="time" class="form-control" id="hora" name="hora" min="08:00" max="20:00" required>
       </div>
 
-      <!-- Botão para enviar o formulário -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="termos" required>
+        <label class="form-check-label" for="termos">Li e aceito os <a href="termos.html" target="_blank">termos e condições</a></label>
+      </div>
       <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
     </form>
   </div>
 
-  <!-- Rodapé da página -->
+  <!-- Rodapé -->
   <footer style="background-color: #1e2a47; color: white; text-align: center; padding: 30px 10px; margin-top: 50px;">
     <p class="mb-1" style="margin-bottom: 10px; color: white;">Tudo o que você precisa para o dia a dia, a um clique de distância.</p>
     <p class="mb-1" style="margin-bottom: 10px; color: white;">&copy; 2025 Minimercado - Todos os direitos reservados.</p>
@@ -199,7 +168,16 @@
     </p>
   </footer>
 
-  <!-- Scripts do Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      const horaInput = document.getElementById("hora").value;
+      if (horaInput < "08:00" || horaInput > "20:00") {
+        alert("O horário escolhido deve estar entre 08:00 e 20:00.");
+        document.getElementById("hora").focus();
+        event.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
